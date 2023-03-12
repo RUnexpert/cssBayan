@@ -87,3 +87,35 @@ html {
     opacity: 1;
   }
 }
+
+@media (max-width: 820px) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .meme__title {
+    font-size: 1.2rem;
+  }
+
+  .image {
+    height: 18rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .checkbox:checked ~ .meme__content {
+    height: 10rem;
+  }
+
+  .meme__title {
+    font-size: 0.9rem;
+  }
+
+  .image {
+    height: 10rem;
+  }
+}
