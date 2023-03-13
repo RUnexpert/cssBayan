@@ -25,6 +25,7 @@ html {
 
 .meme__card {
   border-top: 0.1rem solid rgb(186, 186, 186);
+  cursor: pointer;
 }
 .meme__header {
   display: flex;
@@ -36,6 +37,7 @@ html {
 }
 
 .meme__title {
+  color: blue;
   font-size: 1.5rem;
 }
 
@@ -60,6 +62,10 @@ html {
 
 .checkbox:checked ~ .meme__header > .meme__button {
   transform: rotate(45deg);
+}
+
+.meme__card > .checkbox:checked + .meme__header > .meme__title {
+  color: black;
 }
 
 .meme__button {
@@ -87,11 +93,19 @@ html {
     opacity: 1;
   }
 
-  .meme__card:hover  .meme__content {
+  .meme__card:hover .meme__content {
     padding-bottom: 1rem;
     height: 30rem;
     opacity: 1;
     transition: all 0.5s ease-in-out;
+  }
+
+  .meme__card:hover .meme__header > .meme__button {
+    transform: rotate(45deg);
+  }
+
+  .memes:hover > .meme__card  >  .meme__header > .meme__title {
+    color: black;
   }
 }
 
