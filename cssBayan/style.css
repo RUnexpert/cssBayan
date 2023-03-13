@@ -83,7 +83,7 @@ html {
     opacity: 0;
   }
 
-  .meme__header:hover .meme__button {
+  .memes:hover .meme__button {
     opacity: 1;
   }
 }
