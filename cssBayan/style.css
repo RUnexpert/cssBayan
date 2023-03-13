@@ -10,16 +10,18 @@ html {
 }
 
 .header {
-  max-width: 80%;
+  max-width: 70%;
   padding-top: 2rem;
   margin: 0 auto;
 }
+
 .title {
   font-size: 2em;
   text-transform: uppercase;
 }
+
 .main {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -27,13 +29,20 @@ html {
   border-top: 0.1rem solid rgb(186, 186, 186);
   cursor: pointer;
 }
+
 .meme__header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   height: 5rem;
   cursor: pointer;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .meme__title {
@@ -42,34 +51,34 @@ html {
 }
 
 .meme__content {
+  margin: 0 auto;
   height: 0;
   opacity: 0;
   overflow: hidden;
   transition: all 0.5s;
-  text-align: center;
 }
 
 .checkbox {
   display: none;
 }
 
-.checkbox:checked ~ .meme__content {
-  padding-bottom: 1rem;
-  height: 30rem;
+.checkbox:checked + .meme__header > .meme__content,
+.meme__header {
+  max-height: 30rem;
+  height: 100%;
   opacity: 1;
   transition: all 0.5s ease-in-out;
 }
 
-.checkbox:checked ~ .meme__header > .meme__button {
+.checkbox:checked + .meme__header > .wrapper > .meme__button {
   transform: rotate(45deg);
 }
 
-.meme__card > .checkbox:checked + .meme__header > .meme__title {
+.meme__card > .checkbox:checked + .meme__header > .wrapper > .meme__title {
   color: black;
 }
 
 .meme__button {
-  overflow-x: hidden;
   font-size: 2rem;
   transition: 0.5s;
 }
@@ -100,12 +109,12 @@ html {
     transition: all 0.5s ease-in-out;
   }
 
-  .meme__card:hover .meme__header > .meme__button {
+  .meme__card:hover .meme__header > .wrapper > .meme__button {
     transform: rotate(45deg);
   }
 
-  .memes:hover > .meme__card  >  .meme__header > .meme__title {
-    color: black;
+  .meme__card:hover > .meme__header > .wrapper > .meme__title {
+    color: black !important;
   }
 }
 
