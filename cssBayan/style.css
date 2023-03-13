@@ -114,11 +114,18 @@ html {
     transition: all 0.5s ease-in-out;
   }
 
+  @media (max-width: 500px) {
+    .meme__card:hover .meme__content {
+      height: 10rem;
+      opacity: 1;
+    }
+  }
+
   .meme__card:hover .meme__header > .wrapper > .meme__button {
     transform: rotate(45deg);
   }
 
-  .meme__card:hover > .meme__header > .wrapper > .meme__title {
+  .memes:hover .meme__header > .wrapper > .meme__title {
     color: black !important;
   }
 }
