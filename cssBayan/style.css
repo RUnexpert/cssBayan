@@ -78,6 +78,11 @@ html {
   color: black;
 }
 
+.meme__card:active .image {
+  filter: grayscale(1) saturate(1.6) invert(0.05);
+  transition: all 0.5s ease-in-out;
+}
+
 .meme__button {
   font-size: 2rem;
   transition: 0.5s;
