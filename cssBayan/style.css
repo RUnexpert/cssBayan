@@ -46,7 +46,6 @@ html {
 }
 
 .meme__title {
-  color: blue;
   font-size: 1.5rem;
 }
 
@@ -101,6 +100,10 @@ html {
 @media (any-hover: hover) {
   .meme__button {
     opacity: 0;
+  }
+
+  .meme__title {
+    color: blue;
   }
 
   .memes:hover .meme__button {
